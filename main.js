@@ -64,7 +64,7 @@ function loadEnvMap(scene, renderer) {
     const loader = new RGBELoader();
     loader.setDataType(THREE.UnsignedByteType);
     loader.load(
-      '/kyber/assets/images/sight/starmap_2020_4k.hdr',
+      'beautiful-shining-stars-night-sky.hdr',
       (texture) => {
         const pmremGenerator = new THREE.PMREMGenerator(renderer);
         pmremGenerator.compileEquirectangularShader();
@@ -89,7 +89,7 @@ function loadEnvMap(scene, renderer) {
 
     // Load the GLTF model
     loader.load(
-        '/kyber/assets/3D/symbol2.gltf',
+        'symbol2.gltf',
         (gltf) => {
             // Adjust the position, rotation, and scale of the loaded model as needed
             gltf.scene.position.set(0, 0, 0);
