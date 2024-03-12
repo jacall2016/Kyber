@@ -1,0 +1,29 @@
+# Overview
+
+I wrote a program that allows a user to upload a 3d gltf objects and view that objects. the user can orbit around the object, zoom and pan. I formated the project so that multiple cards will appear each with their own 3d object. when a user hovers over a card the placeholder image his hidden and the 3d screen is revealed.
+
+I want to make a website for displaying and selling 3d assets and this project was a demo of the future functionality I will need to impement for that website.
+
+video demo.
+prototype https://youtu.be/iYB0GOhSCwM
+finnished product https://youtu.be/e0BpkBlEPFs
+
+# Development Environment
+
+Node.js
+and threejs are required assets.
+
+# Useful Websites
+
+https://threejs.org/manual/
+https://threejs.org/
+
+Three.js Tutorial For Absolute Beginners
+https://www.youtube.com/watch?v=xJAfLdUgdc4&list=PLjcjAqAnHd1EIxV4FSZIiJZvsdrBc1Xho
+
+# Future Work
+
+There will be a lot of future work I wish to implement in this project
+I want to update the wireframe display to be more user freindly. This would include having the list of cards as a popout menu. having a single 3d screen which covers most of the screen. Adding a header and footer. the header needs a logo, title, shopping cart and account logo. I would also need to add a page for the cart and a page for login. I want to make it possible for the user to choose different textures for the 3d objects and have those textures display. I want to add shapekey sliders to allow a user to adjust the shape of objects. I want to allow the administrator to be able to change the background image in the 3d scene. I want to add a mongo database to house the data and then write to the database and display from it. 
+
+I have desided to make this project my next sprint and convert it to a react web application. I think this will give me the chance to expand it's capabilities to a much greater degree and be more worthwhile.
