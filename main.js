@@ -64,7 +64,7 @@ function loadEnvMap(scene, renderer) {
     const loader = new RGBELoader();
     loader.setDataType(THREE.UnsignedByteType);
     loader.load(
-      'beautiful-shining-stars-night-sky.hdr',
+      'starmap_2020_4k.hdr',
       (texture) => {
         const pmremGenerator = new THREE.PMREMGenerator(renderer);
         pmremGenerator.compileEquirectangularShader();
