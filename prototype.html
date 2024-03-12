@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your 3D Kyber Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="three-screen"></div>
+    <header class="main-header">
+        <div class="header-section logo-section">
+            <div class="logo">
+                <img src="assets/images/sight/logo.svg" alt="Kyber Logo">
+            </div>
+            <div class="site-title">
+                <h1>Your 3D Kyber Shop</h1>
+            </div>
+        </div>
+        <div class="header-section actions-section">
+            <div class="cart">
+                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 751 751" width="60" height="60" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <image href="assets/images/sight/shopping cart.svg" width="100%" height="100%" />
+                    <text x="65%" y="48%" font-size="400" text-anchor="middle" dy="3" fill="#fff" class="cart-number">0</text>
+                </svg>
+            </div>                                      
+            <div class="account">
+                <img src="assets/images/sight/tempAccount.png" alt="Account Image">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="slideout-buttons">
+            <input type="checkbox" id="hamburger-checkbox" class="hidden-checkbox">
+            <label for="hamburger-checkbox" class="mobile-button" id="hamburger-button">&#9776;</label>
+
+            <input type="checkbox" id="question-mark-checkbox" class="hidden-checkbox">
+            <label for="question-mark-checkbox" class="mobile-button" id="question-mark-button">&#63;</label>
+        </div>
+        <section class="kyber-info">
+            <div class="kyber-list">
+                <div class="search-box">
+                    <label for="search" class="search-lable">&#8981;</label>
+                    <input type="text" class="search">
+                    <div class="catagoty-list">
+                        <div class="catagories"></div>
+                        <button class="add-catagory">+</button>
+                    </div>
+                </div>
+                
+                <input type="text" class="search">
+                <div class="catagoty-list">
+                    <div class="catagories">
+                        <button class="catagoty">violet</button>
+                        <button class="catagoty">red</button>
+                        <button class="catagoty">violet</button>
+                        <button class="catagoty">red</button>
+                    </div>
+                    <button class="add-catagory">+</button>
+                </div>
+                
+                <div class="card">
+                    <h3>Card Title 1</h3>
+                    <img src="assets/images/thumbnails/card.png" alt="Card Image">
+                </div>
+                <div class="card">
+                    <h3>Card Title 2</h3>
+                    <img src="assets/images/thumbnails/card.png" alt="Card Image">
+                </div>
+                <div class="card">
+                    <h3>Card Title 3</h3>
+                    <img src="assets/images/thumbnails/card.png" alt="Card Image">
+                </div>
+                <div class="card">
+                    <h3>Card Title 4</h3>
+                    <img src="assets/images/thumbnails/card.png" alt="Card Image">
+                </div>
+                <div class="card">
+                    <h3>Card Title 5</h3>
+                    <img src="assets/images/thumbnails/card.png" alt="Card Image">
+                </div>
+                <div class="card">
+                    <h3>Card Title 6</h3>
+                    <img src="assets/images/thumbnails/card.png" alt="Card Image">
+                </div>
+            </div>
+            <div class="kyber-details">
+                <h2>Kyber Details</h2>
+                <div class="placeholder"> 
+                    <div class="details-content">
+                        <h2 class="title">Title</h2>
+                        <p class="description">Description goes here.</p>
+                        <p>Price: $<span class="price-span">19.99</span></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="edit-details">Edit Details</button>
+                        <button class="delete-card">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>     
+    
+    <footer class="footer">
+        <div class="email-info">
+            <p>Contact us at: your.email@example.com</p>
+        </div>
+        <div class="facebook-info">
+            <a href="#" target="_blank" class="social-icon">
+                <img src="assets/images/sight/facebook.svg" alt="Facebook">
+            </a>
+        </div>
+        <div class="twitter-info">
+            <a href="#" target="_blank" class="social-icon">
+                <img src="assets/images/sight/twitterx.svg" alt="Twitter">
+            </a>
+        </div>
+        <div class="instagram-info">
+            <a href="#" target="_blank" class="social-icon">
+                <img src="assets/images/sight/instagram.svg" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+    <!-- Script Section -->
+    <script src="main.js" type="module"></script>
+</body>
+</html>

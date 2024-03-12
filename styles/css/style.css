@@ -1,0 +1,388 @@
+@import url("https://fonts.cdnfonts.com/css/star-wars");
+@import url("https://fonts.cdnfonts.com/css/death-star");
+@import url("https://fonts.cdnfonts.com/css/aurebeshenglish");
+@import url("https://fonts.cdnfonts.com/css/ur-kittat");
+:root {
+  --color-white: white;
+  --color-black-transparent: rgba(0, 0, 0, 0.228);
+  --color-primary-light: #18f2dc31;
+  --color-primary: #18f2dc;
+  --color-primary-dark: #18f2dc84;
+  --color-accent: hsla(64, 100%, 50%, 0.199);
+  --color-warning: #eeff008b;
+  --color-danger: #ff00008b;
+  --color-gray: gray;
+  --color-gray-transparent: rgba(125, 125, 125, 0.276);
+  --color-black: black;
+  --color-link: #1885f2;
+  --color-gradient: #1885f2;
+  --color-transparent: rgba(24, 119, 242, 0);
+  --font-star-wars: "Star Wars", sans-serif;
+  --font-death-star: "Death Star", sans-serif;
+}
+
+.main-header {
+  z-index: 1;
+  background: linear-gradient(to bottom, var(--color-gradient) 30%, var(--color-transparent));
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-header .header-section {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.main-header .header-section.logo-section .logo img {
+  width: 50px;
+  height: 50px;
+}
+.main-header .header-section.logo-section .site-title h1 {
+  margin: 0 10px;
+}
+.main-header .header-section.actions-section .cart img,
+.main-header .header-section.actions-section .account img {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+}
+.main-header .header-section.actions-section .cart img:hover,
+.main-header .header-section.actions-section .account img:hover {
+  border-radius: 50%;
+  background-color: var(--color-primary-transparent);
+  box-shadow: 0 0 10px 2px var(--color-primary);
+}
+.main-header .header-section.actions-section .account img {
+  border-radius: 50%;
+  border: 3px solid var(--color-black);
+}
+
+.cart-circle {
+  fill: var(--color-primary); /* Use the global primary color variable for the circle */
+  visibility: visible;
+}
+
+footer {
+  z-index: 1;
+  background: linear-gradient(to top, var(--color-gradient) 30%, var(--color-transparent));
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: var(--color-white);
+  text-align: center;
+  margin-top: auto;
+  width: 100vw;
+  box-sizing: border-box;
+}
+footer .email-info,
+footer .facebook-info,
+footer .twitter-info,
+footer .instagram-info {
+  margin-right: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  height: auto;
+}
+footer .social-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.kyber-list {
+  padding-top: 20px;
+  color: var(--color-white); /* Use the global white color variable */
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; /* Set the width to fit its contents */
+  height: 100%; /* Set the height to fill the screen down to the footer */
+}
+.kyber-list .list-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.kyber-list .list-header .add-card {
+  font-size: xx-large; /* Adjusted font-size */
+  border-radius: 10px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary-light); /* Use the global primary light color variable */
+  border: var(--color-primary-dark) 1px solid; /* Use the global primary dark color variable */
+  color: var(--color-white);
+}
+.kyber-list .list-header .add-card:hover {
+  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.search-box:hover {
+  gap: 10px;
+}
+.search-box:hover .search {
+  width: 100px; /* Set the width to the desired size when the parent is hovered */
+  visibility: visible;
+}
+.search-box .search {
+  height: 30px;
+  border-radius: 10px;
+  width: 0px;
+  background-color: var(--color-gray-transparent);
+  transition: width 0.3s ease; /* Add a smooth transition effect for width */
+  border: var(--color-gray) 1px solid;
+  color: var(--color-white);
+  visibility: hidden;
+  padding-left: 10px;
+}
+.search-box .search-lable {
+  text-align: center;
+  align-items: center;
+  font-size: xx-large;
+  background-color: var(--color-gray-transparent);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-color: var(--color-gray) 1px solid;
+}
+.search-box .search-lable:hover {
+  box-shadow: 0 0 10px 2px var(--color-gray);
+}
+.search-box .add-catagory {
+  font-size: xx-large;
+  border-radius: 10px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary-light);
+  border: var(--color-primary-dark) 1px solid;
+  color: var(--color-white);
+}
+.search-box .add-catagory:hover {
+  box-shadow: 0 0 10px 2px var(--color-primary);
+}
+
+.catagories {
+  border-radius: 50px;
+  width: 200px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  display: flex; /* Allow the container to grow beyond its initial size */
+  /* Custom scrollbar styles */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent; /* Set scrollbar color to transparent */
+}
+.catagories .catagoty {
+  align-items: center;
+  display: inline-block; /* Set display to inline-block */
+  background-color: var(--color-primary-light); /* Use the global primary light color variable */
+  border: var(--color-primary-dark) 1px solid; /* Use the global primary dark color variable */
+  color: var(--color-white);
+  font-size: large;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
+  margin-right: 10px;
+  margin: 5px;
+}
+.catagories .catagoty:hover {
+  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
+}
+
+.card-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.card-container::-webkit-scrollbar {
+  width: 0; /* Hide the scrollbar for webkit browsers (Chrome, Safari, Edge) */
+}
+.card-container .card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 130px;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: var(--color-black-transparent); /* Use the global black transparent color variable */
+  color: var(--color-white);
+  transition: transform 0.3s ease-in-out;
+}
+.card-container .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
+}
+.card-container .card img {
+  width: 125px;
+  height: 125px;
+  border-radius: 10px;
+}
+.card-container .card h3 {
+  margin: 0;
+}
+
+/* Import Kyber List styles */
+.kyber-details {
+  color: var(--color-white);
+  padding-right: 20px;
+  padding-left: 20px;
+  width: auto;
+}
+.kyber-details .placeholder {
+  background-color: var(--color-black-transparent);
+  padding: 20px;
+  border-radius: 10%;
+}
+.kyber-details .placeholder .add-to-cart {
+  background-color: var(--color-primary-light); /* Use the global primary light color variable */
+  border: var(--color-primary-dark) 1px solid; /* Use the global primary dark color variable */
+}
+.kyber-details .placeholder .add-to-cart:hover {
+  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
+}
+.kyber-details .placeholder .edit-details {
+  background-color: var(--color-accent); /* Use the global accent color variable */
+  border: var(--color-warning) 1px solid; /* Use the global warning color variable */
+}
+.kyber-details .placeholder .edit-details:hover {
+  box-shadow: 0 0 10px 2px var(--color-warning); /* Use the global warning color variable */
+}
+.kyber-details .placeholder .delete-card {
+  background-color: var(--color-danger); /* Use the global danger color variable */
+  border: var(--color-danger) 1px solid; /* Use the global danger color variable */
+}
+.kyber-details .placeholder .delete-card:hover {
+  box-shadow: 0 0 10px 2px var(--color-danger); /* Use the global danger color variable */
+}
+.kyber-details .placeholder button {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: xx-large;
+  width: 60px;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+/* Import Kyber Details styles */
+/* Global styles for three-screen, body, and kyber-info */
+.three-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.kyber-info {
+  display: flex;
+  justify-content: space-between;
+  z-index: 0;
+}
+
+/* Styles for slideout-buttons */
+.slideout-buttons {
+  display: none;
+}
+
+/* Styles for hidden-checkbox */
+.hidden-checkbox {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+/* Styles for mobile-button */
+.mobile-button {
+  z-index: 1;
+  background-color: var(--color-gray-transparent);
+  color: var(--color-white);
+  border: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.mobile-button:hover {
+  background-color: var(--color-gray);
+}
+
+/* Styles for kyber-list and kyber-details */
+.kyber-list,
+.kyber-details {
+  z-index: 1;
+  width: auto;
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+}
+.kyber-list::-webkit-scrollbar,
+.kyber-details::-webkit-scrollbar {
+  width: 0;
+}
+.kyber-list::-webkit-scrollbar-thumb,
+.kyber-details::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Media query for mobile view */
+@media (max-width: 767px) {
+  .kyber-list,
+  .kyber-details {
+    height: calc(100vh - 300px);
+  }
+  .kyber-list {
+    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+  }
+  .kyber-details {
+    transform: translateX(50%);
+    transition: transform 0.3s ease;
+  }
+  .slideout-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  .mobile-button:hover {
+    background-color: var(--color-gray);
+  }
+}
+/* Media query for larger screens */
+@media (min-width: 900px) {
+  body {
+    color: var(--color-white);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

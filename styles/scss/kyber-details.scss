@@ -1,0 +1,54 @@
+.kyber-details {
+    color: var(--color-white);
+    padding-right: 20px;
+    padding-left: 20px;
+    width: auto;
+    //background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-primary),);
+  
+    .placeholder {
+      background-color: var(--color-black-transparent);
+      padding: 20px;
+      border-radius: 10%;
+  
+      .add-to-cart {
+        background-color: var(--color-primary-light); /* Use the global primary light color variable */
+        border: var(--color-primary-dark) 1px solid; /* Use the global primary dark color variable */
+  
+        &:hover {
+          box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
+        }
+      }
+  
+      .edit-details {
+        background-color: var(--color-accent); /* Use the global accent color variable */
+        border: var(--color-warning) 1px solid; /* Use the global warning color variable */
+  
+        &:hover {
+          box-shadow: 0 0 10px 2px var(--color-warning); /* Use the global warning color variable */
+        }
+      }
+  
+      .delete-card {
+        background-color: var(--color-danger); /* Use the global danger color variable */
+        border: var(--color-danger) 1px solid; /* Use the global danger color variable */
+  
+        &:hover {
+          box-shadow: 0 0 10px 2px var(--color-danger); /* Use the global danger color variable */
+        }
+      }
+  
+      button {
+        color: var(--color-white);
+        font-weight: bold;
+        font-size: xx-large;
+        width: 60px;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        transition: box-shadow 0.1s ease-in-out;
+      }
+    }
+  }
+  

@@ -1,0 +1,24 @@
+@import 'fonts';
+
+// Set up global styles
+:root {
+    // Colors
+    --color-white: white;
+    --color-black-transparent: rgba(0, 0, 0, 0.228);
+    --color-primary-light: #18f2dc31;
+    --color-primary: #18f2dc;
+    --color-primary-dark: #18f2dc84;
+    --color-accent: hsla(64, 100%, 50%, 0.199);
+    --color-warning: #eeff008b;
+    --color-danger: #ff00008b;
+    --color-gray: gray;
+    --color-gray-transparent: rgba(125, 125, 125, 0.276);
+    --color-black: black;
+    --color-link: #1885f2;
+    --color-gradient: #1885f2;
+    --color-transparent: rgba(24, 119, 242, 0);
+  
+    // Fonts
+    --font-star-wars: 'Star Wars', sans-serif;
+    --font-death-star: 'Death Star', sans-serif;
+  }

@@ -1,0 +1,35 @@
+// _footer.scss
+
+footer {
+  z-index: 1;
+  background: linear-gradient(to top, var(--color-gradient) 30%, var(--color-transparent));
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: var(--color-white);
+  text-align: center;
+  margin-top: auto;
+  width: 100vw;
+  box-sizing: border-box;
+
+  .email-info,
+  .facebook-info,
+  .twitter-info,
+  .instagram-info {
+    margin-right: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .social-icon {
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+    "Kybers": [
+        {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "title": "Example Object",
+        "description": "This is a sample 3D object for demonstration purposes.",
+        "versionList": [
+            {
+            "version": 1,
+            "title": "Version 1",
+            "description": "The initial version of the 3D object.",
+            "gltfObject": "cube_white.gltf",
+            "thumbnail": "cube_white.png"
+            },
+            {
+            "version": 2,
+            "title": "Version 2",
+            "description": "An updated version with additional features.",
+            "gltfObject": "cube-red.glft",
+            "thumbnail": "cube_red.png"
+            }
+        ]
+        }
+    ]
+}
+  
