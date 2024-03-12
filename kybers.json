@@ -1,26 +1,58 @@
 {
-    "Kybers": [
+    "kybers": [
         {
-        "id": "550e8400-e29b-41d4-a716-446655440000",
-        "title": "Example Object",
-        "description": "This is a sample 3D object for demonstration purposes.",
-        "versionList": [
-            {
-            "version": 1,
-            "title": "Version 1",
-            "description": "The initial version of the 3D object.",
-            "gltfObject": "cube_white.gltf",
-            "thumbnail": "cube_white.png"
-            },
-            {
-            "version": 2,
-            "title": "Version 2",
-            "description": "An updated version with additional features.",
-            "gltfObject": "cube-red.glft",
-            "thumbnail": "cube_red.png"
-            }
-        ]
+        "id": 1,
+        "title": "Title1",
+        "description": "Sight symbol",
+        "price": 10.99,
+        "gltfFileName": "symbol2.glb",
+        "thumbnailImage": "card.png",
+        "categoryList": ["category1", "category2"]
+        },
+        {
+        "id": 2,
+        "title": "Title2",
+        "description": "Sight symbol",
+        "price": 12.99,
+        "gltfFileName": "symbol2.glb",
+        "thumbnailImage": "card.png",
+        "categoryList": ["category1", "category3"]
+        },
+        {
+        "id": 3,
+        "title": "Title3",
+        "description": "Sight symbol",
+        "price": 9.99,
+        "gltfFileName": "symbol2.glb",
+        "thumbnailImage": "card.png",
+        "categoryList": ["category2", "category3"]
+        },
+        {
+        "id": 4,
+        "title": "Title4",
+        "description": "Sight symbol",
+        "price": 14.99,
+        "gltfFileName": "symbol2.glb",
+        "thumbnailImage": "card.png",
+        "categoryList": ["category1"]
+        },
+        {
+        "id": 5,
+        "title": "Title5",
+        "description": "Sight symbol",
+        "price": 11.99,
+        "gltfFileName": "symbol2.glb",
+        "thumbnailImage": "card.png",
+        "categoryList": ["category2"]
+        },
+        {
+        "id": 6,
+        "title": "Title6",
+        "description": "Sight symbol",
+        "price": 13.99,
+        "gltfFileName": "symbol2.glb",
+        "thumbnailImage": "card.png",
+        "categoryList": ["category3"]
         }
     ]
 }
-  
