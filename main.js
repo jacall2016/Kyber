@@ -1,4 +1,5 @@
-import { OrbitControls } from "../node_modules/three-full/sources/controls/OrbitControls.js";
+//import { OrbitControls } from "../node_modules/three-full/sources/controls/OrbitControls.js";
+//import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/controls/OrbitControls.js';
 import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/build/three.module.js';
 import { RGBELoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/RGBELoader.js';
 import { GLTFLoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/GLTFLoader.js';
@@ -117,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Append the renderer to the 3d-screen section
     document.querySelector(".three-screen").appendChild(renderer.domElement);
 
-    const controls = createOrbitControls(camera, renderer);
+    //const controls = createOrbitControls(camera, renderer);
 
     // Load the GLTF model
     loadGLTFModel(scene);
@@ -127,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         requestAnimationFrame(animate);
 
         // Update the controls
-        controls.update();
+        //controls.update();
 
         // rotate the model
         scene.children[0].rotation.y += 0.01;
