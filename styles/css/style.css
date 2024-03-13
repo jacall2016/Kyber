@@ -6,6 +6,14 @@
 @import url("https://fonts.cdnfonts.com/css/jedi-special-forces-3d");
 @import url("https://fonts.cdnfonts.com/css/starjedi-special-edition");
 @import url("https://fonts.cdnfonts.com/css/soloist-halftone");
+@import url("https://fonts.cdnfonts.com/css/star-wars");
+@import url("https://fonts.cdnfonts.com/css/death-star");
+@import url("https://fonts.cdnfonts.com/css/aurebeshenglish");
+@import url("https://fonts.cdnfonts.com/css/ur-kittat");
+@import url("https://fonts.cdnfonts.com/css/death-star");
+@import url("https://fonts.cdnfonts.com/css/jedi-special-forces-3d");
+@import url("https://fonts.cdnfonts.com/css/starjedi-special-edition");
+@import url("https://fonts.cdnfonts.com/css/soloist-halftone");
 :root {
   --color-white: rgb(255, 255, 255);
   --color-black-transparent: rgba(0, 0, 0, 0.228);
@@ -72,6 +80,8 @@
 }
 
 footer {
+  position: fixed; /* Change position to fixed */
+  bottom: 0; /* Align the footer to the bottom of the screen */
   z-index: 1;
   background: linear-gradient(to top, var(--color-gradient) 30%, var(--color-transparent));
   padding-top: 20px;
@@ -79,7 +89,6 @@ footer {
   justify-content: center;
   color: var(--color-white);
   text-align: center;
-  margin-top: auto;
   width: 100vw;
   box-sizing: border-box;
 }
@@ -314,7 +323,7 @@ body {
 .kyber-list,
 .kyber-details {
   width: auto;
-  height: calc(100vh - 180px);
+  height: 100vh;
   overflow-y: hidden;
 }
 
@@ -371,7 +380,7 @@ body {
 }
 
 .kyber-info .kyber-list {
-  transform: translateX(-230px);
+  transform: translateX(-100%);
 }
 
 .kyber-info .kyber-details {
@@ -389,6 +398,12 @@ body {
   align-items: end;
 }
 
+/* Apply styles for mobile devices */
+@media only screen and (max-width: 600px) {
+  .kyber-details-container {
+    transform: translateX(-15px);
+  }
+}
 #hamburger-checkbox:checked ~ .kyber-list {
   transform: translateX(10px);
 }
