@@ -57,7 +57,7 @@
 }
 .main-header .header-section.actions-section .cart img:hover,
 .main-header .header-section.actions-section .account img:hover {
-  border-radius: 50%;
+  border-radius: 50px;
   background-color: var(--color-primary-transparent);
   box-shadow: 0 0 10px 2px var(--color-primary);
 }
@@ -98,7 +98,7 @@ footer .instagram-info {
 footer .social-icon img {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: 50px;
 }
 
 .kyber-list {
@@ -158,7 +158,7 @@ footer .social-icon img {
   background-color: var(--color-gray-transparent);
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 50px;
   border-color: var(--color-gray) 1px solid;
 }
 .search-box .search-lable:hover {
@@ -188,6 +188,7 @@ footer .social-icon img {
   scrollbar-color: transparent transparent; /* Set scrollbar color to transparent */
 }
 .catagories .catagoty {
+  border-radius: 50px;
   font-family: var(--font-death-star);
   align-items: center;
   display: inline-block; /* Set display to inline-block */
@@ -198,11 +199,10 @@ footer .social-icon img {
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 50px;
   margin-right: 10px;
   margin: 5px;
   white-space: nowrap;
-  transition: transform 0.1s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
 }
 .catagories .catagoty:hover {
   box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
@@ -229,7 +229,7 @@ footer .social-icon img {
   padding: 10px;
   background-color: var(--color-black-transparent); /* Use the global black transparent color variable */
   color: var(--color-white);
-  transition: transform 0.3s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
 }
 .card-container .card:hover {
   transform: scale(1.1);
@@ -254,7 +254,7 @@ footer .social-icon img {
 .kyber-details .placeholder {
   background-color: var(--color-black-transparent);
   padding: 20px;
-  border-radius: 10%;
+  border-radius: 10px;
 }
 .kyber-details .placeholder .add-to-cart {
   background-color: var(--color-primary-light); /* Use the global primary light color variable */
@@ -294,9 +294,8 @@ footer .social-icon img {
 /* Global styles for three-screen, body, and kyber-info */
 .three-screen {
   position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  width: 10px;
+  height: 10px;
 }
 
 body {
@@ -311,89 +310,91 @@ body {
   font-family: var(--font-star-wars);
 }
 
-.kyber-info {
-  display: flex;
-  justify-content: space-between;
-  z-index: 0;
-}
-
-/* Styles for slideout-buttons */
-.slideout-buttons {
-  display: none;
-}
-
-/* Styles for hidden-checkbox */
-.hidden-checkbox {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
-}
-
-/* Styles for mobile-button */
-.mobile-button {
-  z-index: 1;
-  background-color: var(--color-gray-transparent);
-  color: var(--color-white);
-  border: none;
-  width: 100px;
-  height: 100px;
-  border-radius: 10%;
-  font-size: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.mobile-button:hover {
-  background-color: var(--color-gray);
-}
-
 /* Styles for kyber-list and kyber-details */
 .kyber-list,
 .kyber-details {
-  z-index: 1;
   width: auto;
-  height: calc(100vh - 170px);
-  overflow-y: auto;
-}
-.kyber-list::-webkit-scrollbar,
-.kyber-details::-webkit-scrollbar {
-  width: 0;
-}
-.kyber-list::-webkit-scrollbar-thumb,
-.kyber-details::-webkit-scrollbar-thumb {
-  background-color: transparent;
+  height: calc(100vh - 180px);
+  overflow-y: hidden;
 }
 
-/* Media query for mobile view */
-@media (max-width: 767px) {
-  .kyber-list,
-  .kyber-details {
-    height: calc(100vh - 300px);
-  }
-  .kyber-list {
-    transform: translateX(-50%);
-    transition: transform 0.3s ease;
-  }
-  .kyber-details {
-    transform: translateX(50%);
-    transition: transform 0.3s ease;
-  }
-  .slideout-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-  }
-  .mobile-button:hover {
-    background-color: var(--color-gray);
-  }
+.kyber-info {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden; /* Prevents content overflow */
 }
-/* Media query for larger screens */
-@media (min-width: 900px) {
-  body {
-    color: var(--color-white);
-  }
+
+.mobile {
+  z-index: 999;
+  color: var(--color-white);
+  display: flex; /* Add flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 40px;
+  height: 40px;
+  margin: 0px 10px 0px 10px;
+  border-radius: 10px;
+  background-color: var(--color-gray-transparent);
+}
+.mobile:hover {
+  background-color: var(--color-gray);
+  color: var(--color-black);
+}
+
+.kyber-info .kyber-list,
+.kyber-info .kyber-details {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s ease;
+}
+
+.hamburger-checkbox,
+.questionMark-checkbox {
+  display: none; /* Hide the checkboxes */
+}
+
+.hamburger-checkbox {
+  z-index: 100;
+}
+
+#hamburgerLabel {
+  cursor: pointer;
+}
+
+#questionMarkLabel {
+  cursor: pointer;
+}
+
+.kyber-info {
+  flex-direction: row;
+}
+
+.kyber-info .kyber-list {
+  transform: translateX(-230px);
+}
+
+.kyber-info .kyber-details {
+  transform: translateX(100%);
+}
+
+.kyber-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.kyber-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+#hamburger-checkbox:checked ~ .kyber-list {
+  transform: translateX(10px);
+}
+
+#questionMarkCheckbox:checked ~ .kyber-details {
+  transform: translateX(10px);
 }
 
 /*# sourceMappingURL=style.css.map */

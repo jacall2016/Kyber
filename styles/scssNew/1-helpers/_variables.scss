@@ -1,0 +1,27 @@
+//yellows
+$yellow-edit-transparent: hsla(64, 100%, 50%, 0.199); //background color of edit button
+$yellow-edit: #eeff008b; //border color of edit button
+
+//reds
+$red-delete-mid-transparent: #ff00008b; //background color of delete button
+$red-delete-high-transparent: #ff00004b; //border color of delete button
+
+//neuturals
+$white: rgb(255, 255, 255); //font color,
+$black: black; //body background color, account image border color
+$transparent: rgba(0, 0, 0, 0.228); //background color for cards, an detials
+$gray: gray; //mobile button hover color, search-lable border color, search label hover color
+$gray-transparent: rgba(125, 125, 125, 0.276); //mobile button color, search-lable background color
+
+//Blues
+$blue-gradient: #1885f2; //gradient color for header and footer
+$blue-gradient-transparent: rgba(24, 119, 242, 0); //gradient color for header and footer
+
+//turquies
+$turquise-hight-transparent: #18f2dc31; //catagory background color, add-to-cart background color, add-card background color, add-caragory background color
+$turquise-primary: #18f2dc; //hover color for card, caragory, and add buttons
+$turquise-mid-transparent: #18f2dc84; // border color for catagory, border color for add-to-cart, border color for add-card, border color for add-catagory
+
+// Fonts
+$font-star-wars: 'Soloist Halftone', sans-serif; //main font
+$font-death-star: 'Death Star', sans-serif; //component font

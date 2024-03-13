@@ -1,0 +1,60 @@
+// Import normalize.css
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+// Your custom styles go below
+
+// Reset box-sizing
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// Define variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Global styles
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+// Responsive utility classes
+@include media-breakpoint-up(sm) {
+  .text-sm {
+    font-size: 0.875rem; // 14px
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .text-md {
+    font-size: 1rem; // 16px
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .text-lg {
+    font-size: 1.125rem; // 18px
+  }
+}
+
+// Additional custom styles...

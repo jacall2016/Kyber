@@ -1,0 +1,13 @@
+// _buttons.scss
+
+// Define common styles for all buttons
+button {
+    color: var(--color-white); // Setting text color to white
+    font-size: xx-large; // Setting font size to extra large (adjust as needed)
+    align-items: center; // Aligning content vertically
+    text-align: center; // Aligning text horizontally
+    padding: 10px; // Adding padding around the content
+    @include borderRadiusShort; // Applying a short border-radius (assuming you have a mixin for this)
+    border: none; // Removing default button border
+    @include hoverglowTransition; // Applying transition effect (assuming you have a mixin for this)
+}  
