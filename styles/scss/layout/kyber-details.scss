@@ -5,7 +5,27 @@
     width: auto;
     //background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-primary),);
 
-  
+    .details-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      
+        .add-catagory {
+          font-size:xx-large;
+          @include borderRadiusShort;
+          text-align: center;
+          width: 40px;
+          height: 40px;
+          background-color: var(--color-primary-light);
+          border: var(--color-primary-dark) 1px solid;
+          color: var(--color-white);
+
+          &:hover {
+              box-shadow: 0 0 10px 2px var(--color-primary);
+          }
+      }
+    }
+
     .placeholder {
       background-color: var(--color-black-transparent);
       padding: 20px;
@@ -58,4 +78,3 @@
       }
     }
   }
-  

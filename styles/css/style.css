@@ -145,57 +145,20 @@ footer .social-icon img {
   align-items: center;
   gap: 10px;
 }
-.kyber-list .list-header .add-card {
-  font-size: xx-large; /* Adjusted font-size */
-  border-radius: 10px;
-  text-align: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-primary-light); /* Use the global primary light color variable */
-  border: var(--color-primary-dark) 1px solid; /* Use the global primary dark color variable */
-  color: var(--color-white);
-}
-.kyber-list .list-header .add-card:hover {
-  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
-}
 
-.search-box {
+/* Import Kyber List styles */
+.kyber-details {
+  color: var(--color-white);
+  padding-right: 20px;
+  padding-left: 20px;
+  width: auto;
+}
+.kyber-details .details-header {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-}
-.search-box:hover {
   gap: 10px;
 }
-.search-box:hover .search {
-  width: 100px; /* Set the width to the desired size when the parent is hovered */
-  visibility: visible;
-}
-.search-box .search {
-  height: 30px;
-  border-radius: 10px;
-  width: 0px;
-  background-color: var(--color-gray-transparent);
-  transition: width 0.3s ease; /* Add a smooth transition effect for width */
-  border: var(--color-gray) 1px solid;
-  color: var(--color-white);
-  visibility: hidden;
-  padding-left: 10px;
-}
-.search-box .search-lable {
-  text-align: center;
-  align-items: center;
-  font-size: xx-large;
-  background-color: var(--color-gray-transparent);
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  border-color: var(--color-gray) 1px solid;
-}
-.search-box .search-lable:hover {
-  box-shadow: 0 0 10px 2px var(--color-gray);
-}
-.search-box .add-catagory {
+.kyber-details .details-header .add-catagory {
   font-size: xx-large;
   border-radius: 10px;
   text-align: center;
@@ -205,82 +168,8 @@ footer .social-icon img {
   border: var(--color-primary-dark) 1px solid;
   color: var(--color-white);
 }
-.search-box .add-catagory:hover {
+.kyber-details .details-header .add-catagory:hover {
   box-shadow: 0 0 10px 2px var(--color-primary);
-}
-
-.catagories {
-  border-radius: 50px;
-  width: 200px;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  display: flex; /* Allow the container to grow beyond its initial size */
-  /* Custom scrollbar styles */
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent; /* Set scrollbar color to transparent */
-}
-.catagories .catagoty {
-  border-radius: 50px;
-  font-family: var(--font-death-star);
-  align-items: center;
-  display: inline-block; /* Set display to inline-block */
-  background-color: var(--color-primary-light); /* Use the global primary light color variable */
-  border: var(--color-primary-dark) 1px solid; /* Use the global primary dark color variable */
-  color: var(--color-white);
-  font-size: large;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 10px;
-  margin: 5px;
-  white-space: nowrap;
-  transition: box-shadow 0.1s ease-in-out;
-}
-.catagories .catagoty:hover {
-  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
-}
-
-.card-container {
-  max-height: 400px;
-  overflow-y: auto;
-}
-.card-container::-webkit-scrollbar {
-  width: 0; /* Hide the scrollbar for webkit browsers (Chrome, Safari, Edge) */
-}
-.card-container .card {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 145px;
-  align-items: center;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-top: 15px;
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: var(--color-black-transparent); /* Use the global black transparent color variable */
-  color: var(--color-white);
-  transition: box-shadow 0.1s ease-in-out;
-}
-.card-container .card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
-}
-.card-container .card img {
-  width: 125px;
-  height: 125px;
-  border-radius: 10px;
-}
-.card-container .card h3 {
-  margin: 0;
-}
-
-/* Import Kyber List styles */
-.kyber-details {
-  color: var(--color-white);
-  padding-right: 20px;
-  padding-left: 20px;
-  width: auto;
 }
 .kyber-details .placeholder {
   background-color: var(--color-black-transparent);
@@ -325,6 +214,123 @@ footer .social-icon img {
 }
 
 /* Import Kyber Details styles */
+.search-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.search-box .add-card {
+  font-size: xx-large; /* Adjusted font-size */
+  border-radius: 10px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary-light); /* Use the global primary light color variable */
+  border: var(--color-primary-dark) 1px solid; /* Use the global primary dark color variable */
+  color: var(--color-white);
+  margin-right: 10px;
+}
+.search-box .add-card:hover {
+  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
+}
+.search-box:hover {
+  gap: 10px;
+}
+.search-box:hover .search {
+  width: 100px; /* Set the width to the desired size when the parent is hovered */
+  visibility: visible;
+}
+.search-box .search {
+  height: 30px;
+  border-radius: 10px;
+  width: 0px;
+  background-color: var(--color-gray-transparent);
+  transition: width 0.3s ease; /* Add a smooth transition effect for width */
+  border: var(--color-gray) 1px solid;
+  color: var(--color-white);
+  visibility: hidden;
+  padding-left: 10px;
+}
+.search-box .search-lable {
+  text-align: center;
+  align-items: center;
+  font-size: xx-large;
+  background-color: var(--color-gray-transparent);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border-color: var(--color-gray) 1px solid;
+}
+.search-box .search-lable:hover {
+  box-shadow: 0 0 10px 2px var(--color-gray);
+}
+
+.card-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.card-container::-webkit-scrollbar {
+  width: 0; /* Hide the scrollbar for webkit browsers (Chrome, Safari, Edge) */
+}
+.card-container .card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 145px;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: var(--color-black-transparent); /* Use the global black transparent color variable */
+  color: var(--color-white);
+  transition: box-shadow 0.1s ease-in-out;
+}
+.card-container .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
+}
+.card-container .card img {
+  width: 125px;
+  height: 125px;
+  border-radius: 10px;
+}
+.card-container .card h3 {
+  margin: 0;
+}
+
+.catagories {
+  border-radius: 50px;
+  width: 200px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  display: flex; /* Allow the container to grow beyond its initial size */
+  /* Custom scrollbar styles */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent; /* Set scrollbar color to transparent */
+}
+.catagories .catagoty {
+  border-radius: 50px;
+  font-family: var(--font-death-star);
+  align-items: center;
+  display: inline-block; /* Set display to inline-block */
+  background-color: var(--color-primary-light); /* Use the global primary light color variable */
+  border: var(--color-primary-dark) 1px solid; /* Use the global primary dark color variable */
+  color: var(--color-white);
+  font-size: large;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin: 5px;
+  white-space: nowrap;
+  transition: box-shadow 0.1s ease-in-out;
+}
+.catagories .catagoty:hover {
+  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
+}
+
 /* Global styles for three-screen, body, and kyber-info */
 .three-screen {
   position: fixed;
