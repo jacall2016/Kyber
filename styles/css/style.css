@@ -14,6 +14,21 @@
 @import url("https://fonts.cdnfonts.com/css/jedi-special-forces-3d");
 @import url("https://fonts.cdnfonts.com/css/starjedi-special-edition");
 @import url("https://fonts.cdnfonts.com/css/soloist-halftone");
+a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-link);
+}
+
+text a {
+  color: var(--color-white);
+}
+text a:hover {
+  color: var(--color-link);
+}
+
 :root {
   --color-white: rgb(255, 255, 255);
   --color-black-transparent: rgba(0, 0, 0, 0.228);
@@ -26,8 +41,8 @@
   --color-danger-light: #ff00004b;
   --color-gray: gray;
   --color-gray-transparent: rgba(125, 125, 125, 0.276);
-  --color-black: black;
-  --color-link: #1885f2;
+  --color-black: rgb(0, 0, 0);
+  --color-link: #ff00ff;
   --color-gradient: #1885f2;
   --color-transparent: rgba(24, 119, 242, 0);
   --font-star-wars: "Soloist Halftone", sans-serif;
@@ -77,6 +92,13 @@
 .cart-circle {
   fill: var(--color-primary); /* Use the global primary color variable for the circle */
   visibility: visible;
+}
+
+.cart-number {
+  fill: var(--color-white);
+}
+.cart-number:hover {
+  fill: var(--color-link);
 }
 
 footer {
@@ -264,6 +286,9 @@ footer .social-icon img {
   background-color: var(--color-black-transparent);
   padding: 20px;
   border-radius: 10px;
+}
+.kyber-details .placeholder .details-content .description {
+  width: 300px;
 }
 .kyber-details .placeholder .add-to-cart {
   background-color: var(--color-primary-light); /* Use the global primary light color variable */

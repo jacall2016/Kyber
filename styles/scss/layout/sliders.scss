@@ -1,0 +1,85 @@
+.mobile {
+  z-index: 999;
+  color: var(--color-white);
+  display: flex; /* Add flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 40px;
+  height: 40px;
+  margin: 0px 10px 0px 10px;
+  @include borderRadiusShort;
+  background-color: var(--color-gray-transparent);
+
+  &:hover {
+    background-color: var(--color-gray);
+    color: var(--color-black);
+  }
+}
+
+.kyber-info {
+  .kyber-list,
+  .kyber-details {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s ease;
+  }
+}
+  
+.hamburger-checkbox,
+.questionMark-checkbox {
+  display: none; /* Hide the checkboxes */
+}
+
+.hamburger-checkbox {
+  z-index: 100;
+}
+
+#hamburgerLabel {
+  cursor:pointer;
+}
+
+#questionMarkLabel {
+  cursor:pointer
+}
+
+.kyber-info {
+  flex-direction: row;
+}
+
+.kyber-info .kyber-list {
+  transform: translateX(-100%);
+}
+
+.kyber-info .kyber-details {
+  transform: translateX(100%);
+}
+
+.kyber-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.kyber-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items:end;
+}
+
+/* Apply styles for mobile devices */
+@media only screen and (max-width: 600px) {
+  .kyber-details-container {
+    transform: translateX(-15px);
+  }
+}
+
+  // When the hamburger checkbox is checked
+#hamburger-checkbox:checked ~ .kyber-list {
+  transform: translateX(10px); // Translate to the right by 100%
+}
+
+// When the hamburger checkbox is checked
+#questionMarkCheckbox:checked ~ .kyber-details {
+  transform: translateX(10px); // Translate to the right by 100%
+}
+

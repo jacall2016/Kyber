@@ -1,0 +1,32 @@
+/* Global styles for three-screen, body, and kyber-info */
+.three-screen {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+}
+  
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: black;
+  text-shadow: 0px 7px 15px rgba(255, 0, 0, 0.445);
+  font-family: var(--font-star-wars);   
+}
+
+/* Styles for kyber-list and kyber-details */
+.kyber-list,
+.kyber-details {
+  width: auto;
+  height: calc(100vh);
+  overflow-y: hidden;
+}
+
+.kyber-info {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden; /* Prevents content overflow */
+}

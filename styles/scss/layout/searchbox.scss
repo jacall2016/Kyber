@@ -1,0 +1,56 @@
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &:hover {
+        gap: 10px;
+    }
+    
+    &:hover .search {
+        width: 100px; /* Set the width to the desired size when the parent is hovered */
+        visibility: visible;
+    }
+
+    .search {
+        height: 30px;
+        @include borderRadiusShort;
+        width: 0px;
+        background-color: var(--color-gray-transparent);
+        transition: width 0.3s ease; /* Add a smooth transition effect for width */
+        border: var(--color-gray) 1px solid;
+        color: var(--color-white);
+        visibility: hidden;
+        padding-left: 10px;
+    }
+
+    .search-lable {
+        text-align: center;
+        align-items: center;
+        font-size:xx-large;
+        background-color: var(--color-gray-transparent);
+        width: 40px;
+        height: 40px;
+        @include borderRadiusLarge;
+        border-color: var(--color-gray) 1px solid;
+
+        &:hover {
+        box-shadow: 0 0 10px 2px var(--color-gray);
+        }
+    }
+
+    .add-catagory {
+        font-size:xx-large;
+        @include borderRadiusShort;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        background-color: var(--color-primary-light);
+        border: var(--color-primary-dark) 1px solid;
+        color: var(--color-white);
+
+        &:hover {
+            box-shadow: 0 0 10px 2px var(--color-primary);
+        }
+    }
+}
