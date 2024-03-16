@@ -292,6 +292,22 @@ footer .social-icon img {
   transform: scale(1.1);
   box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
 }
+.card-container .card .card-radio {
+  display: none;
+}
+.card-container .card input[name=card]:checked + .details {
+  display: block;
+  color: red;
+  background-color: red;
+}
+.card-container .card .card label {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
 .card-container .card img {
   width: 125px;
   height: 125px;
@@ -301,7 +317,7 @@ footer .social-icon img {
   margin: 0;
 }
 
-.catagories {
+.categories {
   border-radius: 50px;
   width: 200px;
   overflow-x: auto; /* Enable horizontal scrolling */
@@ -310,7 +326,7 @@ footer .social-icon img {
   scrollbar-width: thin;
   scrollbar-color: transparent transparent; /* Set scrollbar color to transparent */
 }
-.catagories .catagoty {
+.categories .category {
   border-radius: 50px;
   font-family: var(--font-death-star);
   align-items: center;
@@ -327,7 +343,7 @@ footer .social-icon img {
   white-space: nowrap;
   transition: box-shadow 0.1s ease-in-out;
 }
-.catagories .catagoty:hover {
+.categories .category:hover {
   box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
 }
 

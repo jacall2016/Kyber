@@ -25,6 +25,27 @@
         transform: scale(1.1);
         box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
       }
+
+      .card-radio {
+        display: none;
+      }
+
+      input[name="card"]:checked + .details {
+        display: block;
+        color:red;
+        background-color: red;
+      }
+
+      .card label {
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+
   
       img {
         width: 125px;

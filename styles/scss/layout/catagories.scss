@@ -1,4 +1,4 @@
-.catagories {
+.categories {
     @include borderRadiusLarge;
     width: 200px;
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -7,7 +7,7 @@
     scrollbar-width: thin;
     scrollbar-color: transparent transparent; /* Set scrollbar color to transparent */
   
-    .catagoty {
+    .category {
       @include borderRadiusLarge;
       font-family: var(--font-death-star);
       align-items: center;

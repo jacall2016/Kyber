@@ -4,6 +4,7 @@ import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources
 import { RGBELoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/RGBELoader.js';
 import { GLTFLoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/GLTFLoader.js';
 
+
 function getScene() {
     return new THREE.Scene();
 }
@@ -84,12 +85,12 @@ function loadEnvMap(scene, renderer) {
     );
   }
 
-  function loadGLTFModel(scene) {
+  function loadGLTFModel(scene, gltf) {
     const loader = new GLTFLoader();
 
     // Load the GLTF model
     loader.load(
-        'symbol2.gltf',
+        './assets/3D/' + gltf,
         (gltf) => {
             // Adjust the position, rotation, and scale of the loaded model as needed
             gltf.scene.position.set(0, 0, 0);
@@ -120,18 +121,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const controls = createOrbitControls(camera, renderer);
 
-    // Load the GLTF model
-    loadGLTFModel(scene);
-
     // Animation function
     var animate = function () {
         requestAnimationFrame(animate);
 
         // Update the controls
         controls.update();
-
-        // rotate the model
-        scene.children[0].rotation.y += 0.01;
 
         // Render the scene
         renderer.render(scene, camera);
