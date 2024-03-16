@@ -4,6 +4,7 @@ import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources
 import { RGBELoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/RGBELoader.js';
 import { GLTFLoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/GLTFLoader.js';
 
+import './cards.js';
 
 function getScene() {
     return new THREE.Scene();
@@ -107,11 +108,31 @@ function loadEnvMap(scene, renderer) {
     );
 }
 
+let activeGltfFileName = '';
+
+function notifyActiveCardChanged(activeCard) {
+    if (activeCard) {
+        activeGltfFileName = activeCard.gltfFileName;
+        // Load the GLTF model whenever the active card changes
+        loadGLTFModel(scene, activeGltfFileName);
+    } else {
+        console.error("No active card found.");
+        activeGltfFileName = ''; // or handle the error accordingly
+    }
+}
+
+function getGltfFileName() {
+    // Return the global variable storing the active card's GLTF file name
+    return activeGltfFileName;
+}
+
 // Wait for the DOM content to be loaded
 document.addEventListener("DOMContentLoaded", function () {
     const scene = getScene();
     const camera = getCamera();
     const renderer = getRenderer();
+    const gltf = getGltfFileName();
+    loadGLTFModel(scene, gltf)
     loadEnvMap(scene, renderer);
     scene.add(getDirectionalLight());
     scene.add(getAmbientLight());
