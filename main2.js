@@ -4,7 +4,7 @@ import { RGBELoader } from 'https://threejsfundamentals.org/threejs/resources/th
 import { GLTFLoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/GLTFLoader.js';
 
 export default class Scene {
-    constructor() {
+    constructor(gltfFileName) {
         this.scene = this.getScene();
         this.camera = this.getCamera();
         this.renderer = this.getRenderer();
@@ -13,6 +13,7 @@ export default class Scene {
 
         this.setup();
         this.loadEnvMap();
+        this.loadedGLTFs(gltfFileName);
     }
 
     getScene() {
@@ -47,16 +48,17 @@ export default class Scene {
     }
 
     getDirectionalLight() {
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-        directionalLight.position.set(1, 1, 1);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 10);
+        directionalLight.position.set(10, 1, 1);
         return directionalLight;
     }
 
     getAmbientLight() {
-        return new THREE.AmbientLight(0x404040);
+        return new THREE.AmbientLight(0xffffff, 100);
     }
 
     loadEnvMap() {
+        console.log('Loading env map...');
         let envMap;
         const loader = new RGBELoader();
         loader.setDataType(THREE.UnsignedByteType);
@@ -78,34 +80,18 @@ export default class Scene {
         );
     }
 
-    addGLTF(gltfFileName) {
+    loadedGLTFs(gltfFileName) {
         const loader = new GLTFLoader();
         loader.load(
-            './assets/3D/' + gltfFileName,
+            './assets/3D/' + "earth.gltf",
             (gltf) => {
-                // Adjust the position, rotation, and scale of the loaded model as needed
-                gltf.scene.position.set(0, 0, 0);
-                gltf.scene.rotation.set(0, 0, 0);
-                gltf.scene.scale.set(1, 1, 1);
-    
                 this.scene.add(gltf.scene);
             },
             undefined,
             (error) => {
-                console.error('Error loading GLTF file:', error);
+                console.error('Error loading GLTF model', error);
             }
         );
-    }
-
-    removeGLTF() {
-        // Iterate over all objects in the scene
-        this.scene.traverse(object => {
-            // Check if the object is an instance of a GLTF object
-            if (object.isGLTF) {
-                // Remove the object from the scene
-                this.scene.remove(object);
-            }
-        });
     }
 
     setup() {
@@ -119,9 +105,11 @@ export default class Scene {
         this.scene.add(object);
     }
 
-    removeObject(object) {
-        this.scene.remove(object);
-    }
+    removeAllObjects() {
+        while (this.scene.children.length > 0) {
+            this.scene.remove(this.scene.children[0]);
+        }
+    }    
 
     render() {
         this.renderer.render(this.scene, this.camera);

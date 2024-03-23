@@ -1,0 +1,16 @@
+.account {
+    color: var(--color-white); // You can keep this line if you want to specify the color
+
+    // Center the .account horizontally
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    // Change font for <p> elements inside .account
+    p {
+        font-family: Arial, sans-serif; // Specify the desired font-family
+        font-size: 16px; // Adjust font size as needed
+        margin: 0; // Remove default margin
+    }
+}

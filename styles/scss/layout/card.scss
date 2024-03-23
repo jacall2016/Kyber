@@ -1,6 +1,7 @@
 .card-container {
     max-height: 400px;
     overflow-y: auto;
+    width: 300px;
   
     &::-webkit-scrollbar {
       width: 0; /* Hide the scrollbar for webkit browsers (Chrome, Safari, Edge) */
@@ -10,15 +11,12 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      width: 145px;
+      width: 240px;
       align-items: center;
       margin-bottom: 10px;
       @include borderRadiusShort;
-      margin-left: 10px;
-      margin-top: 15px;
-      margin-bottom: 20px;
-      padding: 10px;
-      background-color: var(--color-black-transparent); /* Use the global black transparent color variable */
+      margin: 20px;
+      background-color: var(white); /* Use the global black transparent color variable */
       color: var(--color-white);
       @include hoverglowTransition;
       &:hover {
@@ -30,26 +28,67 @@
         display: none;
       }
 
-      input[name="card"]:checked + .details {
+      label {
         display: block;
-        color:red;
-        background-color: red;
-      }
-
-      .card label {
-        display: block;
-        border: 1px solid #ccc;
         border-radius: 8px;
         padding: 10px;
         margin-bottom: 10px;
         cursor: pointer;
       }
 
+      .details {
+        .add-to-cart {
+          background-color: var(--color-primary-light); /* Use the global primary light color variable */
+          border: var(--color-primary-dark) 1px solid; /* Use the global primary dark color variable */
+    
+          &:hover {
+            box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
+          }
+        }
+    
+        .edit-details {
+          background-color: var(--color-accent); /* Use the global accent color variable */
+          border: var(--color-warning) 1px solid; /* Use the global warning color variable */
+    
+          &:hover {
+            box-shadow: 0 0 10px 2px var(--color-warning); /* Use the global warning color variable */
+          }
+        }
+    
+        .delete-card {
+          background-color: var(--color-danger-light); /* Use the global danger color variable */
+          border: var(--color-danger) 1px solid; /* Use the global danger color variable */
+    
+          &:hover {
+            box-shadow: 0 0 10px 2px var(--color-danger); /* Use the global danger color variable */
+          }
+        }
 
+        button {
+          color: var(--color-white);
+          font-weight: bold;
+          font-size: xx-large;
+          width: 60px;
+          align-items: center;
+          text-align: center;
+          padding: 10px;
+          @include borderRadiusShort;
+          border: none;
+          transition: box-shadow 0.1s ease-in-out;
+        }
+      }
+
+      .details.active {
+        display: block;
+      }
+
+      .details.inactive {
+        display: none;
+      }
   
       img {
-        width: 125px;
-        height: 125px;
+        width: 150px;
+        height: 150px;
         @include borderRadiusShort;
       }
   

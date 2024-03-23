@@ -72,19 +72,19 @@ text a:hover {
 .main-header .header-section.logo-section .site-title h1 {
   margin: 0 10px;
 }
-.main-header .header-section.actions-section .cart img,
-.main-header .header-section.actions-section .account img {
+.main-header .header-section.actions-section .cart-icon img,
+.main-header .header-section.actions-section .account-icon img {
   width: 50px;
   height: 50px;
   margin: 0 10px;
 }
-.main-header .header-section.actions-section .cart img:hover,
-.main-header .header-section.actions-section .account img:hover {
+.main-header .header-section.actions-section .cart-icon img:hover,
+.main-header .header-section.actions-section .account-icon img:hover {
   border-radius: 50px;
-  background-color: var(--color-primary-transparent);
-  box-shadow: 0 0 10px 2px var(--color-primary);
+  background-color: var(--color-link);
+  box-shadow: 0 0 10px 2px var(--color-link);
 }
-.main-header .header-section.actions-section .account img {
+.main-header .header-section.actions-section .account-icon img {
   border-radius: 50%;
   border: 3px solid var(--color-black);
 }
@@ -94,10 +94,10 @@ text a:hover {
   visibility: visible;
 }
 
-.cart-number {
+.cart-number a {
   fill: var(--color-white);
 }
-.cart-number:hover {
+.cart-number a:hover {
   fill: var(--color-link);
 }
 
@@ -268,6 +268,7 @@ footer .social-icon img {
 .card-container {
   max-height: 400px;
   overflow-y: auto;
+  width: 300px;
 }
 .card-container::-webkit-scrollbar {
   width: 0; /* Hide the scrollbar for webkit browsers (Chrome, Safari, Edge) */
@@ -276,15 +277,12 @@ footer .social-icon img {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 145px;
+  width: 240px;
   align-items: center;
   margin-bottom: 10px;
   border-radius: 10px;
-  margin-left: 10px;
-  margin-top: 15px;
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: var(--color-black-transparent); /* Use the global black transparent color variable */
+  margin: 20px;
+  background-color: var(white); /* Use the global black transparent color variable */
   color: var(--color-white);
   transition: box-shadow 0.1s ease-in-out;
 }
@@ -295,22 +293,55 @@ footer .social-icon img {
 .card-container .card .card-radio {
   display: none;
 }
-.card-container .card input[name=card]:checked + .details {
+.card-container .card label {
   display: block;
-  color: red;
-  background-color: red;
-}
-.card-container .card .card label {
-  display: block;
-  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
   cursor: pointer;
 }
+.card-container .card .details .add-to-cart {
+  background-color: var(--color-primary-light); /* Use the global primary light color variable */
+  border: var(--color-primary-dark) 1px solid; /* Use the global primary dark color variable */
+}
+.card-container .card .details .add-to-cart:hover {
+  box-shadow: 0 0 10px 2px var(--color-primary); /* Use the global primary color variable */
+}
+.card-container .card .details .edit-details {
+  background-color: var(--color-accent); /* Use the global accent color variable */
+  border: var(--color-warning) 1px solid; /* Use the global warning color variable */
+}
+.card-container .card .details .edit-details:hover {
+  box-shadow: 0 0 10px 2px var(--color-warning); /* Use the global warning color variable */
+}
+.card-container .card .details .delete-card {
+  background-color: var(--color-danger-light); /* Use the global danger color variable */
+  border: var(--color-danger) 1px solid; /* Use the global danger color variable */
+}
+.card-container .card .details .delete-card:hover {
+  box-shadow: 0 0 10px 2px var(--color-danger); /* Use the global danger color variable */
+}
+.card-container .card .details button {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: xx-large;
+  width: 60px;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  transition: box-shadow 0.1s ease-in-out;
+}
+.card-container .card .details.active {
+  display: block;
+}
+.card-container .card .details.inactive {
+  display: none;
+}
 .card-container .card img {
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
 }
 .card-container .card h3 {
@@ -457,6 +488,45 @@ body {
 
 #questionMarkCheckbox:checked ~ .kyber-details {
   transform: translateX(10px);
+}
+
+.cart {
+  color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cart p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.account {
+  color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.account p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.about {
+  color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -32,8 +32,8 @@
     }
 
     &.actions-section {
-      .cart,
-      .account {
+      .cart-icon,
+      .account-icon {
         img {
           width: 50px;
           height: 50px;
@@ -41,13 +41,13 @@
 
           &:hover {
             @include borderRadiusLarge;
-            background-color: var(--color-primary-transparent);
-            box-shadow: 0 0 10px 2px var(--color-primary);
+            background-color: var(--color-link);
+            box-shadow: 0 0 10px 2px var(--color-link);
           }
         }
       }
 
-      .account {
+      .account-icon {
         img {
           border-radius: 50%;
           border: 3px solid var(--color-black);
@@ -62,7 +62,7 @@
   visibility: visible;
 }
 
-.cart-number {
+.cart-number a {
   fill: var(--color-white);
   &:hover {
     fill: var(--color-link);

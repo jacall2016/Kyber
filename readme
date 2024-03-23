@@ -8,6 +8,19 @@ video demo.
 prototype https://youtu.be/iYB0GOhSCwM
 finnished product https://youtu.be/e0BpkBlEPFs
 
+# web pages
+
+index.html
+this is the main ecomerse page which shows products and displays a 3d version of the product
+account.html
+this page allows a user to access their information. I was unable to complete the login and authentication process so it is partually complete
+
+about.html
+this page is a simple page explaining the purpose of the sight
+
+cart.html
+this is page allows a user to view the items they added to a cart and process the information to checkout. I completed parts of this page but was unable to get the whole process working.
+
 # Development Environment
 
 Node.js
@@ -23,7 +36,23 @@ https://www.youtube.com/watch?v=xJAfLdUgdc4&list=PLjcjAqAnHd1EIxV4FSZIiJZvsdrBc1
 
 # Future Work
 
-There will be a lot of future work I wish to implement in this project
-I want to update the wireframe display to be more user freindly. This would include having the list of cards as a popout menu. having a single 3d screen which covers most of the screen. Adding a header and footer. the header needs a logo, title, shopping cart and account logo. I would also need to add a page for the cart and a page for login. I want to make it possible for the user to choose different textures for the 3d objects and have those textures display. I want to add shapekey sliders to allow a user to adjust the shape of objects. I want to allow the administrator to be able to change the background image in the 3d scene. I want to add a mongo database to house the data and then write to the database and display from it. 
+I struggled this sprint to implement the site. I had to start over several times when I was unable to work through some challanges. I also desided to change the structure of the site a few times. I ran into asynconous issues and loading challanges. I expirianced 2 primary challanges. 1 toggoling the cards to allow the information to be visible and to pass that needed information to display the 3d object. I ran into issues with scope in this project. I thought I was further on than I antisipated but things that I thought would be simple turned out to be very challanging to implement. I almost had the loading working but haven't figured out that part. I spent significant amounts of time trying to figure out how to add and delete objects from a 3d scene. in the end I desided to create a new scene after each transition. This is more costly and not what I would prefer but sort of works I am not expiriancing lag in the 3js renderer when trying to orbit around objects. I am not sure why this is. I also think I overfocused on getting things to display correctly over functionality which costed me. 
 
-I have desided to make this project my next sprint and convert it to a react web application. I think this will give me the chance to expand it's capabilities to a much greater degree and be more worthwhile.
+the future of this project is ment to have the following things added
+
+- working login functionality
+- restrictions based on client status
+- working loading display for the correct images
+- working cart and working checkout functionality
+- more intresting about page
+- fixed laging issues with rendering the 3js objects
+- fixed glitching textures with 3js objects
+- restricted zoom in and out on orbit controls
+- rotating 3js object
+- ability for client to choose background lighting for the 3js scenes.
+- shape key controls if a 3js object has shape keys
+- animation control for 3d object that has animations
+
+in the future I will probebly choose to design the selecting of objects differently. Instead of cards that can be selected I would load all the objects into a single scene in a circular array and make that array scrollable. if an object is hovered over or clicked on I would zoom in on the object and and display information around that object. this method would require deeper 3js skills but would make a more intresting interactive sight. It may also reduce the challanges of loading and rendering objects since all the objects would already be loaded. The challange with implementing the sight in this manner is loading a large number of 3d objects could slow down the loading time for the website. 
+
+I would like to make the site more customized to the kyber crystal starwars products I am intrested in selling. I would like to add a 3d rendered lightsaber to the scene that allows the user to see what the crystal will look like when inside a lightsaber. 
